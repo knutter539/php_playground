@@ -4,21 +4,33 @@
     
     include("class_lib.php");
     
-    $nick = new person("");
-    $kara = new person("");
+    $nick = new Person("");
+    $kara = new Person("");
 
-    $nick->set_name("Nick Baranowski");
-    $kara->set_name("Kara Krajci");
+    $nick->setName("Nick Baranowski");
+    $kara->setName("Kara Krajci");
 
-    echo "Nick's Full Name: ". $nick->get_name();
+    echo "Nick's Full Name: ". $nick->getName();
     echo "<br>";
-    echo "Kara's Full Name: ". $kara->get_name();
+    echo "Kara's Full Name: ". $kara->getName();
 
 
-    $newGuy = new person("New Guy");
+    $newGuy = new Person("New Guy");
     echo "<br><br>";
-    echo "The New Guy's Name Is: ". $newGuy->get_name();
+    echo "The New Guy's Name Is: ". $newGuy->getName();
+    echo "<br><br>";
 
-    echo "<br>Pin Number:". $newGuy->pinNumber;
+    //private property, will error out
+    //echo "<br>Pin Number:". $newGuy->pinNumber;
+
+    $newEmployee = new Employee("Matt Baranowski");
+    $newEmployee->setHeight("6'1");
+    $newEmployee->setEmpID("1273");
+    echo "New Employee: ".$newEmployee->name;
+    echo "<br>";
+    echo "Height: ".$newEmployee->height;
+    echo "<br>";
+    echo "ID: ".$newEmployee->empID;
+
 
 ?>
