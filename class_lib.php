@@ -18,8 +18,18 @@
             return $this->name;
         }
        
+        private function get_pin() {
+            return $this->pinNumber;
+        }
 
-       
+    }
+
+    class employee extends person {
+
+        function __construct($empName) {
+            $this->set_name($empName);
+        }
+
     }
 
 ?>
