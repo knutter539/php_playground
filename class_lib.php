@@ -46,7 +46,7 @@
         }
 
         //overrides setName in parent class
-        function setName() {
+        function setName($newName) {
             $this->name = "Assface";
         }
 
